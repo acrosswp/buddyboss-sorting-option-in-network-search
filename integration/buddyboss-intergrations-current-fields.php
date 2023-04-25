@@ -57,7 +57,7 @@ class BuddyBoss_Sorting_Option_In_Network_Search_BuddyBoss_Integration_Current_F
     public function admin_general_setting_main_callback() {
         ?>
         <p>
-            <?php esc_html_e( 'Giving Admin user to Sorting section in Network Search', 'buddyboss' ); ?>
+            <?php esc_html_e( 'Giving Admin user to Sorting section in Network Search', 'buddyboss-sorting-option-in-network-search' ); ?>
         </p>
         <?php
 	}

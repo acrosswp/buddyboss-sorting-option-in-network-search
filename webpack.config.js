@@ -3,6 +3,7 @@
  */
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const wpPot = require('wp-pot');
 
 var custom_module = {
   plugins: [new MiniCssExtractPlugin()],
@@ -63,6 +64,17 @@ var frontend_style = Object.assign({}, custom_module, style_output, {
       ],
   },
 });
+
+
+//// POT file.
+wpPot( {
+	package: 'BuddyBoss Sorting Option In Network Search',
+	domain: 'buddyboss-sorting-option-in-network-search',
+	destFile: 'languages/buddyboss-sorting-option-in-network-search.pot',
+	relativeTo: './',
+	src: [ './**/*.php' ],
+	bugReport: 'https://github.com/acrosswp/buddyboss-sorting-option-in-network-search/issues'
+} );
 
 // Return Array of Configurations
 module.exports = [
