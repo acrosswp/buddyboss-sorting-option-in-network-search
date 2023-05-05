@@ -20,5 +20,5 @@ Giving Admin user to Sorting section in Network Search
 
 ## Changelog ##
 
-### 1.0.0 [Sep 01, 2019] ###
+### 1.0.0 ###
    * Add Plugin to WordPress Repository
