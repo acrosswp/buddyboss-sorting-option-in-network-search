@@ -108,7 +108,7 @@ class Sorting_Option_In_Network_Search_For_BuddyBoss_Admin {
             echo '<ul id="buddyboss-sorting-main">';
             foreach( $sorting_values as $sorting_value ) {
                 $sorting_item = apply_filters( 'bp_search_label_search_type', $sorting_value );
-                printf( '<li class="buddyboss-sorting-content">%s <input type="checkbox" checked name="sorting-option-in-network-search-for-buddyboss-enable[]" value="%s"/></li>', $sorting_item, $sorting_value );
+                printf( '<li class="buddyboss-sorting-content">%s <input type="checkbox" style="opacity: 0;" checked name="sorting-option-in-network-search-for-buddyboss-enable[]" value="%s"/></li>', $sorting_item, $sorting_value );
             }
             echo '</ul>';
         }
