@@ -1,11 +1,10 @@
 <?php
 
-abstract class WordPress_Plugins_Dependency {
+abstract class Wordpress_Plugin_Boilerplate_Plugins_Dependency {
 
     function __construct() {
 
         add_filter( 'sorting-option-in-network-search-for-buddyboss-load', array( $this, 'boilerplate_load' ) );
-
     }
 
     /**
