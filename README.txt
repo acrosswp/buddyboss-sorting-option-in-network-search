@@ -1,5 +1,5 @@
 === Sorting Option In Network Search For BuddyBoss ===
-Contributors: acrosswp
+Contributors: acrosswp, raftaar1191
 Tags: , buddyboss-platform, network-search, global-search, sorting
 Donate link: https://acrosswp.com/
 Requires at least: 6.0
@@ -31,6 +31,10 @@ e.g.
 Yes.
 
 == Changelog ==
+
+= 1.0.1 =
+* Update Plugin name
+* Update the readme file
 
 = 1.0.0 =
 * Add Plugin to WordPress Repository
