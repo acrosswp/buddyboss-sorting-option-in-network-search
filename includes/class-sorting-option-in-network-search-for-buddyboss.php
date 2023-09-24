@@ -68,14 +68,14 @@ class Sorting_Option_In_Network_Search_For_BuddyBoss {
 	 */
 	public function __construct() {
 
+		$this->define_constants();
+
 		if ( defined( 'SORTING_OPTION_IN_NETWORK_SEARCH_FOR_BUDDYBOSS_VERSION' ) ) {
 			$this->version = SORTING_OPTION_IN_NETWORK_SEARCH_FOR_BUDDYBOSS_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
 		$this->plugin_name = 'sorting-option-in-network-search-for-buddyboss';
-
-		$this->define_constants();
 
 		$this->load_dependencies();
 

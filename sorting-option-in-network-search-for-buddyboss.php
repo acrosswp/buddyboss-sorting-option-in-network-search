@@ -16,7 +16,7 @@
  * Plugin Name:       Sorting Option In Network Search For BuddyBoss
  * Plugin URI:        https://acrosswp.com
  * Description:       Sorting Option In Network Search For BuddyBoss by AcrossWP
- * Version:           1.0.0
+ * Version:           1.0.2
  * Author:            AcrossWP
  * Author URI:        https://acrosswp.com
  * License:           GPL-2.0+
