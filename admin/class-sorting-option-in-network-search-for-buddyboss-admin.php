@@ -40,6 +40,9 @@ class Sorting_Option_In_Network_Search_For_BuddyBoss_Admin {
 	 */
 	private $version;
 
+
+	private $section_id = 'sorting-option-in-network-search-for-buddyboss-enable';
+
 	/**
 	 * Initialize the class and set its properties.
 	 *
@@ -78,22 +81,47 @@ class Sorting_Option_In_Network_Search_For_BuddyBoss_Admin {
 	}
 
 	/**
+	 * Add Settings link to plugins area.
+	 *
+	 * @since    1.0.3
+	 *
+	 * @param array  $links Links array in which we would prepend our link.
+	 * @param string $file  Current plugin basename.
+	 * @return array Processed links.
+	 */
+	public function modify_plugin_action_links( $links, $file ) {
+
+		// Return normal links if not BuddyPress.
+		if ( SORTING_OPTION_IN_NETWORK_SEARCH_FOR_BUDDYBOSS_PLUGIN_BASENAME != $file ) {
+			return $links;
+		}
+
+		// Add a few links to the existing links array.
+		return array_merge(
+			$links,
+			array(
+				'settings'      => '<a href="' . esc_url( admin_url( 'admin.php?page=bp-settings&tab=bp-search#'. $this->section_id ) ) . '">' . esc_html__( 'Settings', 'buddyboss' ) . '</a>',
+				'about'         => '<a href="' . esc_url( bp_get_admin_url( '?hello=buddyboss' ) ) . '">' . esc_html__( 'About', 'buddyboss' ) . '</a>',
+			)
+		);
+	}
+
+	/**
 	 * Register the Setting in BuddyBoss General settings Area
 	 *
 	 * @since    1.0.0
 	 */
 	public function admin_setting_general_register_fields( $setting ) {
 
-        $section_id = 'sorting-option-in-network-search-for-buddyboss-enable';
         // Main General Settings Section
 	    $setting->add_section( 
-            $id,
+            $this->section_id,
             __( 'BuddyBoss Sorting Option In Network Search', 'sorting-option-in-network-search-for-buddyboss' ),
             array( $this, 'admin_general_setting_main_callback' )
         );
 
 	    $args          = array();
-	    $setting->add_field( $section_id, __( 'Sorting', 'sorting-option-in-network-search-for-buddyboss' ), array( $this, 'admin_general_setting_callback' ), '', $args );
+	    $setting->add_field( $this->section_id, __( 'Sorting', 'sorting-option-in-network-search-for-buddyboss' ), array( $this, 'admin_general_setting_callback' ), '', $args );
     }
 
     public function admin_general_setting_callback() {
@@ -108,7 +136,7 @@ class Sorting_Option_In_Network_Search_For_BuddyBoss_Admin {
             echo '<ul id="buddyboss-sorting-main">';
             foreach( $sorting_values as $sorting_value ) {
                 $sorting_item = apply_filters( 'bp_search_label_search_type', $sorting_value );
-                printf( '<li class="buddyboss-sorting-content">%s <input type="checkbox" style="opacity: 0;" checked name="sorting-option-in-network-search-for-buddyboss-enable[]" value="%s"/></li>', $sorting_item, $sorting_value );
+                printf( '<li class="buddyboss-sorting-content">%s <input type="checkbox" style="opacity: 0;" checked name="%s[]" value="%s"/></li>', $sorting_item, $this->section_id, $sorting_value );
             }
             echo '</ul>';
         }
