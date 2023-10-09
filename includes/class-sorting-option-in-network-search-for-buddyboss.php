@@ -151,45 +151,57 @@ class Sorting_Option_In_Network_Search_For_BuddyBoss {
 	private function load_dependencies() {
 
 		/**
-		 * The class responsible for loading the dependency main class
-		 * core plugin.
+		 * Add composer file
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/dependency/class-dependency.php';
+		require_once( SORTING_OPTION_IN_NETWORK_SEARCH_FOR_BUDDYBOSS_PLUGIN_PATH . 'vendor/autoload.php' );
 
 		/**
 		 * The class responsible for loading the dependency main class
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/dependency/buddyboss.php';
+		require_once SORTING_OPTION_IN_NETWORK_SEARCH_FOR_BUDDYBOSS_PLUGIN_PATH . 'includes/dependency/class-dependency.php';
+
+		/**
+		 * The class responsible for loading the dependency main class
+		 * core plugin.
+		 */
+		require_once SORTING_OPTION_IN_NETWORK_SEARCH_FOR_BUDDYBOSS_PLUGIN_PATH . 'includes/dependency/buddyboss.php';
+
+		/**
+		 * Check if the class does not exits then only allow the file to add
+		 */
+		if( class_exists( 'AcrossWP_Main_Menu' ) ) {
+			AcrossWP_Main_Menu::instance();
+		}
 
 		/**
 		 * The file is responce for loading all the necessay functions
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/functions.php';
+		require_once SORTING_OPTION_IN_NETWORK_SEARCH_FOR_BUDDYBOSS_PLUGIN_PATH . 'includes/functions.php';
 
 		/**
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-sorting-option-in-network-search-for-buddyboss-loader.php';
+		require_once SORTING_OPTION_IN_NETWORK_SEARCH_FOR_BUDDYBOSS_PLUGIN_PATH . 'includes/class-sorting-option-in-network-search-for-buddyboss-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-sorting-option-in-network-search-for-buddyboss-i18n.php';
+		require_once SORTING_OPTION_IN_NETWORK_SEARCH_FOR_BUDDYBOSS_PLUGIN_PATH . 'includes/class-sorting-option-in-network-search-for-buddyboss-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-sorting-option-in-network-search-for-buddyboss-admin.php';
+		require_once SORTING_OPTION_IN_NETWORK_SEARCH_FOR_BUDDYBOSS_PLUGIN_PATH . 'admin/class-sorting-option-in-network-search-for-buddyboss-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-sorting-option-in-network-search-for-buddyboss-public.php';
+		require_once SORTING_OPTION_IN_NETWORK_SEARCH_FOR_BUDDYBOSS_PLUGIN_PATH . 'public/class-sorting-option-in-network-search-for-buddyboss-public.php';
 
 		$this->loader = new Sorting_Option_In_Network_Search_For_BuddyBoss_Loader();
 
