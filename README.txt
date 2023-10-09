@@ -2,10 +2,10 @@
 Contributors: acrosswp, raftaar1191
 Tags: , buddyboss-platform, network-search, global-search, sorting
 Donate link: https://acrosswp.com/
-Requires at least: 6.0
-Tested up to: 6.2
-Requires PHP: 8.0
-Stable tag: 1.0.2
+Requires at least: 4.9.1
+Tested up to: 6.2.2
+Requires PHP: 5.6.20
+Stable tag: 1.0.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
