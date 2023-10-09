@@ -151,11 +151,6 @@ class Sorting_Option_In_Network_Search_For_BuddyBoss {
 	private function load_dependencies() {
 
 		/**
-		 * Add composer file
-		 */
-		require_once( SORTING_OPTION_IN_NETWORK_SEARCH_FOR_BUDDYBOSS_PLUGIN_PATH . 'vendor/autoload.php' );
-
-		/**
 		 * The class responsible for loading the dependency main class
 		 * core plugin.
 		 */
@@ -166,13 +161,6 @@ class Sorting_Option_In_Network_Search_For_BuddyBoss {
 		 * core plugin.
 		 */
 		require_once SORTING_OPTION_IN_NETWORK_SEARCH_FOR_BUDDYBOSS_PLUGIN_PATH . 'includes/dependency/buddyboss.php';
-
-		/**
-		 * Check if the class does not exits then only allow the file to add
-		 */
-		if( class_exists( 'AcrossWP_Main_Menu' ) ) {
-			AcrossWP_Main_Menu::instance();
-		}
 
 		/**
 		 * The file is responce for loading all the necessay functions
