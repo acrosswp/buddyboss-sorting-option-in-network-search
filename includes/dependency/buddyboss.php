@@ -1,6 +1,6 @@
 <?php
 
-class Sorting_Option_In_Network_Search_For_BuddyBoss_Platform_Dependency extends Wordpress_Plugin_Boilerplate_Plugins_Dependency {
+class Sorting_Option_In_Network_Search_For_BuddyBoss_Platform_Dependency extends Sorting_Option_In_Network_Search_For_BuddyBoss_Plugins_Dependency {
     /**
      * Load this function on plugin load hook
      * Example: _e('<strong>BuddyBoss Sorting Option In Network Search</strong></a> requires the BuddyBoss Platform plugin to work. Please <a href="https://buddyboss.com/platform/" target="_blank">install BuddyBoss Platform</a> first.', 'sorting-option-in-network-search-for-buddyboss');

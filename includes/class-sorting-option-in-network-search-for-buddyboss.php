@@ -226,6 +226,8 @@ class Sorting_Option_In_Network_Search_For_BuddyBoss {
 		$this->loader->add_action( 'plugin_action_links', $plugin_admin, 'modify_plugin_action_links', 10, 2 );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		
 		$this->loader->add_action( 'bp_admin_setting_search_register_fields', $plugin_admin, 'admin_setting_general_register_fields' );
 

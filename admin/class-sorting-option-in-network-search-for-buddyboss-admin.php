@@ -81,6 +81,29 @@ class Sorting_Option_In_Network_Search_For_BuddyBoss_Admin {
 	}
 
 	/**
+	 * Register the JavaScript for the admin area.
+	 *
+	 * @since    1.0.3
+	 */
+	public function enqueue_styles() {
+
+		/**
+		 * This function is provided for demonstration purposes only.
+		 *
+		 * An instance of this class should be passed to the run() function
+		 * defined in Sorting_Option_In_Network_Search_For_BuddyBoss_Loader as all of the hooks are defined
+		 * in that particular class.
+		 *
+		 * The Sorting_Option_In_Network_Search_For_BuddyBoss_Loader will then create the relationship
+		 * between the defined hooks and the functions defined in this
+		 * class.
+		 */
+
+		 wp_register_style( $this->plugin_name, SORTING_OPTION_IN_NETWORK_SEARCH_FOR_BUDDYBOSS_PLUGIN_URL . 'assets/dist/css/backend-style.css', false, $this->version );
+
+	}
+
+	/**
 	 * Add Settings link to plugins area.
 	 *
 	 * @since    1.0.3
@@ -131,6 +154,7 @@ class Sorting_Option_In_Network_Search_For_BuddyBoss_Admin {
 
         wp_enqueue_script( 'jquery-ui-sortable' );
         wp_enqueue_script( $this->plugin_name );
+        wp_enqueue_style( $this->plugin_name );
 
         if( ! empty( $sorting_values ) ) {
             echo '<ul id="buddyboss-sorting-main">';

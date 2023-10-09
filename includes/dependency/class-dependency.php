@@ -1,6 +1,6 @@
 <?php
 
-abstract class Wordpress_Plugin_Boilerplate_Plugins_Dependency {
+abstract class Sorting_Option_In_Network_Search_For_BuddyBoss_Plugins_Dependency {
 
     function __construct() {
 
