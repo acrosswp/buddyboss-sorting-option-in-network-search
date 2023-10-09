@@ -13,3 +13,5 @@ package-lock.json
 README.md
 webpack-config.js
 webpack.config.js
+composer.json
+composer.lock

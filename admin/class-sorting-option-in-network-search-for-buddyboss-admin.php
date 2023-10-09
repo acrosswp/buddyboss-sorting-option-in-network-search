@@ -123,8 +123,8 @@ class Sorting_Option_In_Network_Search_For_BuddyBoss_Admin {
 		return array_merge(
 			$links,
 			array(
-				'settings'      => '<a href="' . esc_url( admin_url( 'admin.php?page=bp-settings&tab=bp-search#'. $this->section_id ) ) . '">' . esc_html__( 'Settings', 'buddyboss' ) . '</a>',
-				'about'         => '<a href="' . esc_url( bp_get_admin_url( '?hello=buddyboss' ) ) . '">' . esc_html__( 'About', 'buddyboss' ) . '</a>',
+				'settings'      => '<a href="' . esc_url( admin_url( 'admin.php?page=bp-settings&tab=bp-search#'. $this->section_id ) ) . '">' . esc_html__( 'Settings', 'sorting-option-in-network-search-for-buddyboss' ) . '</a>',
+				'about'         => '<a href="https://wordpress.org/plugins/sorting-option-in-network-search-for-buddyboss/" target="_blank">' . esc_html__( 'About plugin', 'sorting-option-in-network-search-for-buddyboss' ) . '</a>',
 			)
 		);
 	}
