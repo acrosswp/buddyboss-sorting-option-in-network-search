@@ -32,6 +32,13 @@ Yes.
 
 == Changelog ==
 
+= 1.0.3 =
+* Add plugin setting link
+* Add suport for PHP version till to 5.6
+* Add suport for WordPress support till version 4.9.1
+* Add styling in Sorting
+* Update class name
+
 = 1.0.2 =
 * Update Plugin name
 * Update the readme file
