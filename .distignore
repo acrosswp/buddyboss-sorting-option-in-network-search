@@ -3,6 +3,8 @@
 /node_modules
 /dist
 
+/assets/dist/css/backend-style.\*.css
+
 .distignore
 .gitignore
 .travis.yml
