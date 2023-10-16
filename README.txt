@@ -4,7 +4,7 @@ Tags: , buddyboss-platform, network-search, global-search, sorting
 Donate link: https://acrosswp.com/
 Requires at least: 6.0
 Tested up to: 6.3.2
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 Requires PHP: 5.6.20
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -29,12 +29,14 @@ Example 1:
 Example 2:
 <iframe src="https://scribehow.com/embed/How_to_Install_and_Activate_a_Sorting_Option_In_Network_Search_For_BuddyBoss__bbUaj2WxQjOffK579J_vEg" width="100%" height="640" allowfullscreen frameborder="0"></iframe>
 
-
 = Support Old version of BuddyBoss =
 
 Yes.
 
 == Changelog ==
+
+= 1.0.4 =
+* Update README.txt file
 
 = 1.0.3 =
 * Add plugin setting link
