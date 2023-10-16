@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build-dev": "webpack --mode development",
-    "build-prod": "webpack --mode production",
+    "build-production": "webpack --mode production",
     "start": "pnpm start",
     "update": "pnpm update"
   },
